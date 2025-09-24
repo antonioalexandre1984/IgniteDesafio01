@@ -1,8 +1,11 @@
 import { Task } from '../Task/Task'
 import style from './TaskList.module.css'
 import  Clipboard  from '../../assets/clipboard.svg'
+import { useState } from 'react'
 
 export function TaskList() {
+    const [tasks, setTasks] = useState(['']);
+
     return (
         <div className={style.taskContainer}>
             <div className={style.taskHeader}>
