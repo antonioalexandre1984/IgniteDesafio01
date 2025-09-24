@@ -1,0 +1,69 @@
+.taskContainer{
+width: 46rem;
+height: 4.5rem;
+margin: 0 auto;
+margin-top: 1rem;
+background: var(--gray-400);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem;
+border-radius: 8px;
+gap: 1rem;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.customCheckbox {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Quando marcado, aplicar preenchimento azul */
+.checkboxContainer input:checked + .customCheckbox {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Opcional: adicionar um check mark (✔) no meio */
+.checkboxContainer input:checked + .customCheckbox::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.taskContainer button{
+    background: var(--gray-300);
+    border: none;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: color 0.2s;
+    padding: 0.3rem;
+    border-radius: 4px;
+   ;
+}

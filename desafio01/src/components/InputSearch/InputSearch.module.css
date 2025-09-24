@@ -13,15 +13,24 @@
     border-radius: 8px;
     padding: 1rem;
     color: var(--gray-100);
-    max-width: 46rem;
+    max-width: 39.87rem;
     height: 3.37rem;
+    transition: border-color 0.2s ease;
 }
 
 .inputSearch input::placeholder{
     color: var(--gray-300);
 }
 
+.inputSearch input:focus{
+    outline: none;
+    border: 1px solid var(--blue);
+    color: var(--gray-100);
+
+}
+
 .inputSearch button{
+    width: 5.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,4 +49,5 @@
 .inputSearch button:hover{
     background: var(--blue);
 }
+
 

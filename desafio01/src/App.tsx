@@ -1,5 +1,6 @@
 import { Header } from './components/Header/Header'
 import { InputSearch } from './components/InputSearch/InputSearch'
+import { TaskList } from './components/TaskLIst/TaskList'
 import './styles.css'
 
 export function App() {
@@ -9,7 +10,7 @@ export function App() {
     <>
       <Header />
       <InputSearch />
-      <h1>Hello world!</h1>
+      <TaskList />
     </>
   )
 }
